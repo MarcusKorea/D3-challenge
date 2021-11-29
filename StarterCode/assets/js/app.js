@@ -51,6 +51,17 @@ d3.csv("data.csv").then(function(census) {
     chartGroup.append("g")
       .call(leftAxis);
 
+    //Add label for each circle
+    var circleText = chartGroup.append("text")
+    .style("text-anchor", "middle")
+    .selectAll("tspan")
+    .data(census)    
+    .enter()
+    .append("tspan")
+    .text(d => d.abbr)
+    .attr("x", d => xLinearScale(d.poverty))
+    .attr("y", d => yLinearScale(d.healthcare)+4);
+    
     //Create Circles
     var circlesGroup = chartGroup.selectAll("circle")
     .data(census)
@@ -62,12 +73,14 @@ d3.csv("data.csv").then(function(census) {
     .attr("fill", "green")
     .attr("opacity", ".78");
 
+
+
     //Initialize tool tip
     var toolTip = d3.tip()
       .attr("class", "tooltip")
       .offset([80, -60])
       .html(function(d) {
-        return (`State: ${d.state} (${d.abbr})`);
+        return (`State: ${d.state} (${d.abbr})<br> Poverty (%): ${d.poverty}<br> Healthcare (%): ${d.healthcare}`);
       });
 
     // Create tooltip
@@ -96,16 +109,7 @@ d3.csv("data.csv").then(function(census) {
       .text("In Poverty (%)");
 
 
-    //Add label for each circle
-    var circleText = chartGroup.append("text")
-    .style("text-anchor", "middle")
-    .selectAll("tspan")
-    .data(census)    
-    .enter()
-    .append("tspan")
-      .text(d => d.abbr)
-      .attr("x", d => xLinearScale(d.poverty))
-      .attr("y", d => yLinearScale(d.healthcare)+4);
+
 
 
   }).catch(function(error) {
