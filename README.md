@@ -13,39 +13,34 @@ The data set included with the assignment is based on 2014 ACS 1-year estimates:
 
 ## Your Task
 
-### Core Assignment: D3 Dabbler (Required Assignment)
-
-![4-scatter](Images/4-scatter.jpg)
-
 You need to create a scatter plot between two of the data variables such as `Healthcare vs. Poverty` or `Smokers vs. Age`.
 
-Using the D3 techniques we taught you in class, create a scatter plot that represents each state with circle elements. You'll code this graphic in the `app.js` file of your homework directory—make sure you pull in the data from `data.csv` by using the `d3.csv` function. Your scatter plot should ultimately appear like the image at the top of this section.
+Create a scatter plot using D3, that represents each state with circle elements. You'll code this graphic in the `app.js` file of your homework directory—make sure you pull in the data from `data.csv`.
 
 * Include state abbreviations in the circles.
 
 * Create and situate your axes and labels to the left and bottom of the chart.
-
-* Note: You'll need to use `python -m http.server` to run the visualisation. This will host the page at `localhost:8000` in your web browser.
-
-
 - - -
-
-### Assessment
-
-Your final product will be assessed on the following metrics:
-
-* Creation of a **new** repository on GitHub called `D3-Challenge` (note the kebab-case). Do not add to an already existing repo.
-
-* Completion of all steps in the core assignment
-
-* Coherency of scatter plot (labels, ticks)
-
-* Visual attraction
-
-* Professionalism
-
-**Good luck!**
-
 ### Copyright
 
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+**Note: The purpose of this assignment was to only display the graph using D3**
+## **Using the Dashboard**:
+1. Open up a terminal and set the current path the folder *Data_Journalism_and_D3/Code*
+   
+2. Enter the command`python -m http.server` into the terminal to run the visualisation. 
+   
+3. In yourr web broswer enter the url `localhost:8000`, you should now see the webpage displayed.
+
+## **Languages used**:
+- HTML
+- CSS
+- JavaScript
+
+## **Javascript Libraries Used**:
+- D3
+
+## **Screenshots**
+## **Before Year is entered**
+![Screenshot of Web Page](/Images/Webpage.png)
